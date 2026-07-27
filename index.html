@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Waze 🚗</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="sidebar">
+    <h2>🚗 Mini Waze</h2>
+    <p>Selecione o tipo de alerta e clique no mapa para registrar!</p>
+    
+    <label for="alertType">Tipo de Alerta:</label>
+    <select id="alertType">
+      <option value="⚠️ Trânsito Lento">⚠️ Trânsito Lento</option>
+      <option value="🚔 Radar / Polícia">🚔 Radar / Polícia</option>
+      <option value="🚧 Obra na Pista">🚧 Obra na Pista</option>
+      <option value="💥 Acidente">💥 Acidente</option>
+    </select>
+
+    <div class="stats">
+      <p>Alertas Ativos no Mapa:</p>
+      <h3 id="alertCount">0</h3>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
